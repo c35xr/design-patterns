@@ -39,12 +39,13 @@ var mySingleton = (function (){
 var singleA = mySingleton.getInstance();
 var singleB = mySingleton.getInstance();
 
+console.log(singleA); // if we check the console, we can see the public methods and properties
+
 singleA.publicMethod(); // we can access to this method beacuse its public
 
 //singleA.privateMethod(); // in this case we can't access to a private method, we'll receive a error
 
 console.log(singleA.getRandomNumber());
-
 
 // in this case dont care if you call getRandomNumber any times because, singleton was instanced just one time
 // for this reason, singleA is equals that singleB because just exists one instance of mySingleton
