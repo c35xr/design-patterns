@@ -2,7 +2,7 @@
 /* Singleton with c35xr */
 
 
-var mySingleton = (function (){
+var mySingleton = function(){
 	var instance;
 
 	function init(){
@@ -33,7 +33,7 @@ var mySingleton = (function (){
 			return instance;
 		}
 	}
-})(); // when you uses () after a function this is called immideately iife [immideately invoked function expression] 
+}(); // when you uses () after a function this is called immideately iife [immideately invoked function expression] 
 
 //gets the instance of mySingleton
 var singleA = mySingleton.getInstance();
@@ -43,7 +43,7 @@ console.log(singleA); // if we check the console, we can see the public methods 
 
 singleA.publicMethod(); // we can access to this method beacuse its public
 
-//singleA.privateMethod(); // in this case we can't access to a private method, we'll receive a error
+singleA.privateMethod(); // in this case we can't access to a private method, we'll receive a error
 
 console.log(singleA.getRandomNumber());
 
